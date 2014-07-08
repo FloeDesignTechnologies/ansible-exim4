@@ -1,0 +1,11 @@
+---
+# tasks file for exim4
+- name: Install Exim4 package
+  apt: name=exim4 state=present update_cache=yes
+  tags: [exim]
+
+- name: Exim4 Configuration
+  template: src=update-exim4.conf.j2 dest=/etc/exim4/update-exim4.conf.conf
+  tags: [exim]
+  notify:
+    - update exim4.conf
