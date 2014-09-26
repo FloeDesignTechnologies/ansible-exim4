@@ -21,6 +21,7 @@ The following variables are used for the content of the /etc/exim4/update-exim4.
 * exim4_dc_hide_mailname
 * exim4_dc_mailname_in_oh
 * exim4_dc_localdelivery
+* exim4_catch_all_email
 
 License
 -------
