@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  author: your name
-  description: 
-  company: your company (optional)
+  author: Pierre Buyle & Pierre Paul Lefebvre
+  description: Manage a simple exim4 configuration
+  company: Pheromone
   license: license (GPLv2, CC-BY, etc)
   min_ansible_version: 1.2
   platforms:

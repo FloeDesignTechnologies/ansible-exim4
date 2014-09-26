@@ -6,7 +6,7 @@ Ansbile role to install and configure Exim4 on Debian based system.
 Role Variables
 --------------
 
-The following variavle are used for the content of the /etc/exim4/update-exim4.conf.conf file
+The following variables are used for the content of the /etc/exim4/update-exim4.conf.conf file
 
 * exim4_dc_eximconfig_configtype
 * exim4_dc_other_hostnames
@@ -31,3 +31,4 @@ Author Information
 ------------------
 
 Pierre Buyle <buyle@pheromone.ca>
+Pierre Paul Lefebvre <lefebvre@pheromone.ca>
