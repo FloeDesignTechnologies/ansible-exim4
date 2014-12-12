@@ -11,5 +11,5 @@
 
 - name: Create a catch all configuration
   template: src=01_exim4-config_catch_all dest=/etc/exim4/conf.d/router/01_exim4-config_catch_all
-  when: exim4_catch_all_email is defined and exim4_catch_all_email is not false
+  when: exim4_catch_all_email is defined and not exim4_catch_all_email
   notify: update exim4.conf
