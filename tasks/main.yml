@@ -9,9 +9,14 @@
   tags: [exim]
   notify: update exim4.conf
 
-- name: Create a catch all configuration
+- name: Create catch all configuration
   template: src=01_exim4-config_catch_all dest=/etc/exim4/conf.d/router/01_exim4-config_catch_all
   when: (exim4_catch_all_email is defined) and exim4_catch_all_email
+  notify: update exim4.conf
+
+- name: Delete catch all configuration
+  file: path=/etc/exim4/conf.d/router/01_exim4-config_catch_all state=absent
+  when: (not exim4_catch_all_email is defined) or (not exim4_catch_all_email)
   notify: update exim4.conf
 
 - name: Create /etc/passwd.client
