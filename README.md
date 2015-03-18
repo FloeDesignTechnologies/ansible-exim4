@@ -47,5 +47,5 @@ BSD
 Author Information
 ------------------
 
-Pierre Buyle <buyle@pheromone.ca>
-Pierre Paul Lefebvre <lefebvre@pheromone.ca>
+* Pierre Buyle <buyle@floedesign.ca>
+* Pierre Paul Lefebvre <lefebvre@studioqi.ca>

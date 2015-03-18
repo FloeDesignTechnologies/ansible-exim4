@@ -2,8 +2,8 @@
 galaxy_info:
   author: Pierre Buyle & Pierre Paul Lefebvre
   description: Manage a simple exim4 configuration
-  company: Pheromone
-  license: license (GPLv2, CC-BY, etc)
+  company: Floe design + technologies
+  license: BDS
   min_ansible_version: 1.2
   platforms:
   - name: Ubuntu
