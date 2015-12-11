@@ -1,0 +1,6 @@
+command_acl:
+  warn
+{% for header in exim4_outgoing_headers %}
+    add_header = {{ header }}
+{% endfor %}
+  accept

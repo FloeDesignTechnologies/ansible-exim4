@@ -13,3 +13,4 @@ exim4_dc_use_split_config: 'false'
 exim4_dc_hide_mailname: ''
 exim4_dc_mailname_in_oh: 'true'
 exim4_dc_localdelivery: 'mail_spool'
+exim4_outgoing_headers: false
