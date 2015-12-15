@@ -23,19 +23,10 @@
   template: src=passwd.client dest=/etc/exim4/passwd.client group=Debian-exim
   notify: update exim4.conf
 
-- name: Add headers to outgoing emails
+- name: Configure ACLs and main configuration
   template: src="conf.d/{{ item }}" dest=/etc/exim4/conf.d/{{ item }}
   with_items:
     - acl/30_exim4-config_check_rcpt
     - acl/31_exim4-config_check_not_smtp
     - main/03_exim4-config_extra_options
-  when: (exim4_outgoing_headers is defined) and exim4_outgoing_headers
-  notify: update exim4.conf
-
-- name: Remove extra headers configurations
-  file: path=/etc/exim4/conf.d/{{ item }} state=absent
-  with_items:
-    - acl/31_exim4-config_check_not_smtp
-    - main/03_exim4-config_extra_options
-  when: (not exim4_outgoing_headers is defined) or (not exim4_outgoing_headers)
   notify: update exim4.conf
