@@ -2,3 +2,6 @@
 # handlers file for exim4
 - name: update exim4.conf
   shell: /usr/sbin/update-exim4.conf
+
+- name: update exim4.aliases
+  shell: newaliases

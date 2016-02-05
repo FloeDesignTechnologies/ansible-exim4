@@ -1,7 +1,7 @@
 Role Name
 ========
 
-Ansbile role to install and configure Exim4 on Debian based system.
+Ansible role to install and configure Exim4 on Debian based system.
 
 Role Variables
 --------------
@@ -25,6 +25,7 @@ The following variables are used for the content of the /etc/exim4/update-exim4.
 * *exim4_passwd_client*: Account and password data for SMTP authentication when exim is authenticating as a client to
    some remote server as a list.
 * *exim4_outgoing_headers*: a list of headers to add to outgoing emails
+* *exim4_aliases*: a list of name and alias to be added
 
 Usage
 -----
@@ -41,6 +42,9 @@ Usage
       exim4_outgoing_headers:
         - "X-MC-Subaccount: mandrill_subaccount_1"
         - "X-Test: True"
+      exim4_aliases:
+        - name: root
+          alias: {{ ansible_env.SUDO_USER }}
 ```
 
 License
